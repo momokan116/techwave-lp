@@ -4,21 +4,29 @@
         <meta charset="UTF-8">
         <title>TechWave株式会社</title>
         <meta name="description" content="TechWave株式会社 サンプルサイト">
+        <meta name="viewport" content="width=device-width, initial-sclae=1">
         <!-- reset.css destyle -->
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css">
             <link rel="stylesheet" href="css/style.css">
     </head>    
     <body>
+        <a href="#" id="page_top">↑</a>
         <div id="home" class="bg-img">
             <header class="header">
                 <h1><a href="#"><img src="img/logo.png" alt="TechWave株式会社"></a></h1>
-            <nav>
+            <nav class="menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 <ul class="main-nav">
                     <li><a href="#service">サービス</a></li>
                     <li><a href="#company">会社情報</a></li>
                     <li><a href="#contact">お問い合わせ</a></li>
                 </ul>
             </nav>
+
             </header>
             <section id="kv">
                 <div class="kv-content">
@@ -63,26 +71,28 @@
         </section>
         <section id="contact" class="wrapper">
             <h2>お問い合わせ</h2>
-            <form action="#">
+            <form action="#" id="contact-form">
                 <div>
-                    <label for="name">名前</label>
-                    <input type="text" id="name" name="your-name" placeholder="名前　太郎">
+                    <div class="label"><span class="required">必須</span><label for="name">名前</label></div>
+                    <input type="text" id="name" name="your-name" placeholder="名前　太郎" required>
                 </div>
                 <div>
-                    <label for="email">メールアドレス</label>
-                    <input type="email" id="email" name="your-email" placeholder="mail@example.com">
+                    <div class="label"><span class="required">必須</span><label for="email">メールアドレス</label></div>
+                    <input type="email" id="email" name="your-email" placeholder="mail@example.com" required>
                 </div>
                 <div>
-                    <label for="message">お問い合わせ内容</label>
-                    <textarea>お問い合わせ内容</textarea>
+                    <div class="label"><span class="required">必須</span><label for="message">お問い合わせ内容</label></div>
+                    <textarea placeholder="お問い合わせ内容" required></textarea>
                 </div>
                 <div>
                     <button type="submit"  class="btn">送信</button> 
                 </div>
-            </form>
+            </form>   
         </section>
     <footer>
         <small>©コピーライト</small>
     </footer>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="js/script.js"></script>
     </body>
 </html>
